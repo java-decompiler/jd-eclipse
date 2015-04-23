@@ -1,0 +1,22 @@
+# Java
+*.class
+
+# Eclipse
+.settings/
+classes/
+.classpath
+.project
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# Gradle
+.gradle/
+build/
+
+# WinMerge
+*.bak

@@ -1,0 +1,20 @@
+apply plugin: 'distribution'
+
+// Common configuration //
+allprojects {
+	version='1.0.0'	
+}
+
+distributions {
+	site {
+		contents {
+			into('features') {
+				from { fileTree('jd.ide.eclipse.feature/build/libs') { include '*.jar' } }
+			}
+			into('plugins') {
+				from { fileTree('jd.ide.eclipse.plugin/build/libs') { include '*.jar' } }
+			}
+			from 'jd.ide.eclipse.site/site.xml', 'LICENSE', 'NOTICE', 'README.md'
+		}
+	}
+}

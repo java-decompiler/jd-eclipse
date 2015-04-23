@@ -1,0 +1,34 @@
+apply plugin: 'java'
+
+configurations {
+	provided
+	compile.extendsFrom provided
+}
+
+dependencies {
+	compile files('lib/jd-common-ide-0.7.1.jar')
+	compile files('lib/jd-common-0.7.1.jar')
+	compile files('lib/jd-core-0.7.1.jar')
+	provided files('lib/eclipse-jee-juno-SR2-minimal.jar')
+}
+
+compileJava {
+	sourceCompatibility = '1.5'
+	targetCompatibility = '1.5'	
+	source 'src'
+}
+
+jar {
+	archiveName baseName + '_' + version + '.' + extension
+	manifest {
+		from 'META-INF/MANIFEST.MF'
+	}	
+	from fileTree('.') {
+		include 'icons/**'
+		include 'about.ini'
+		include 'plugin.xml'
+	}
+	into('lib') {
+		from project.configurations.runtime - project.configurations.provided
+	}
+}
