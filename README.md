@@ -36,7 +36,7 @@ Click on _"Window > Preferences > General > Editors > File Associations"_
 ##How to configure JD-Eclipse ?
 Click on _"Window > Preferences > Java > Decompiler"_
 
-##How to uninstallation JD-Eclipse ?
+##How to uninstall JD-Eclipse ?
 1. Click on _"Help > About Eclipse > Installation Details"_,
 2. Select _"JD-Eclipse Plug-in"_,
 3. Click on _"Uninstall..."_.
