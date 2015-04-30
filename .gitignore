@@ -3,9 +3,7 @@
 
 # Eclipse
 .settings/
-classes/
-.classpath
-.project
+bin/
 
 # Mac
 .DS_Store
