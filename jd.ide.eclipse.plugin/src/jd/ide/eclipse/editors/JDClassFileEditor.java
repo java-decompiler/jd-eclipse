@@ -12,7 +12,7 @@ import java.util.Map;
 import jd.ide.eclipse.JavaDecompilerPlugin;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Status;
@@ -117,11 +117,10 @@ public class JDClassFileEditor
 				IPath basePath = root.getPath();
 				File baseFile = basePath.makeAbsolute().toFile();	
 				
-				if (!baseFile.exists())
-				{
-					baseFile = new File(
-						ResourcesPlugin.getWorkspace().getRoot().getLocationURI().getPath(),
-						baseFile.getPath());				
+				if (!baseFile.exists()) {
+					IResource resource = root.getCorrespondingResource();
+					basePath = resource.getLocation();
+					baseFile = basePath.makeAbsolute().toFile();
 				}
 				
 				// Class path
@@ -136,18 +135,14 @@ public class JDClassFileEditor
 				
 				// Location of the package fragment root within the zip 
 				// (empty specifies the default root).
-				IPath sourceAttachmentRootPath = 
-					root.getSourceAttachmentRootPath();
+				IPath sourceAttachmentRootPath = root.getSourceAttachmentRootPath();
 				String sourceRootPath;
-				if (sourceAttachmentRootPath == null)
-				{
+				
+				if (sourceAttachmentRootPath == null) {
 					sourceRootPath = null;
-				}
-				else
-				{
+				} else {
 					sourceRootPath = sourceAttachmentRootPath.toString();
-					if ((sourceRootPath != null) && 
-						(sourceRootPath.length() == 0))
+					if ((sourceRootPath != null) && (sourceRootPath.length() == 0))
 						sourceRootPath = null;
 				}
 				
