@@ -1,15 +1,21 @@
 apply plugin: 'java'
 
+repositories {
+	maven {
+		url 'https://raw.github.com/java-decompiler/mvn-repo/master'
+	}
+}
+
 configurations {
 	provided
 	compile.extendsFrom provided
 }
 
 dependencies {
-	compile files('lib/jd-common-ide-0.7.1.jar')
-	compile files('lib/jd-common-0.7.1.jar')
-	compile files('lib/jd-core-0.7.1.jar')
-	provided files('lib/eclipse-jee-juno-SR2-minimal.jar')
+	compile 'jd:jd-common-ide:0.7.1'
+	compile 'jd:jd-common:0.7.1'
+	compile 'jd:jd-core:0.7.1'
+	provided 'jd:eclipse-jee-juno-SR2-minimal:1.0.0'
 }
 
 compileJava {
@@ -31,4 +37,9 @@ jar {
 	into('lib') {
 		from project.configurations.runtime - project.configurations.provided
 	}
+}
+
+task downloadDependencies(type: Copy) {
+	from project.configurations.runtime
+	into 'lib'
 }

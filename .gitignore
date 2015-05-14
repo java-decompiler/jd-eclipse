@@ -1,9 +1,11 @@
 # Java
 *.class
+*.jar
 
 # Eclipse
 .settings/
 bin/
+lib/
 
 # Mac
 .DS_Store

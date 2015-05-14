@@ -14,10 +14,20 @@ display all the Java sources during your debugging process, even if
 you do not have them all.
 
 ##How to build JD-Eclipse ?
+###With Gradle:
 ```
 > gradle build installSiteDist
 ```
 generate _"build/install/jd-eclipse-site"_
+###With Eclipse:
+- Download dependencies
+```
+> gradle downloadDependencies
+```
+- Launch _Eclipse_,
+- Import the 3 _"Existing Projects into Workspace"_ by selecting the parent project folder,
+- Export _"Deployable features"_,
+- Copy _"site.xml"_ to the destination directory.
 
 ##How to install JD-Eclipse ?
 1. Build or download & unzip _"jd-eclipse-site-x.y.z.zip"_,
@@ -30,7 +40,7 @@ generate _"build/install/jd-eclipse-site"_
 
 ##How to check the file associations ?
 Click on _"Window > Preferences > General > Editors > File Associations"_
-- _"*.class"_ : _"Eclipse Class File Viewer"_ is selected by default.
+- _"*.class"_ : _Eclipse_ _"Class File Viewer"_ is selected by default.
 - _"*.class without source"_ : _"JD Class File Viewer"_ is selected by default.
 
 ##How to configure JD-Eclipse ?
