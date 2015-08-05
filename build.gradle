@@ -5,6 +5,10 @@ allprojects {
 	version='1.0.0'	
 }
 
+subprojects.each { subproject ->
+    evaluationDependsOn(subproject.path)
+}
+
 distributions {
 	site {
 		contents {
@@ -18,3 +22,5 @@ distributions {
 		}
 	}
 }
+
+installSiteDist.dependsOn subprojects.tasks['jar']

@@ -16,13 +16,13 @@ you do not have them all.
 ##How to build JD-Eclipse ?
 ###With Gradle:
 ```
-> gradle build installSiteDist
+> ./gradlew installSiteDist
 ```
 generate _"build/install/jd-eclipse-site"_
 ###With Eclipse:
 - Download dependencies
 ```
-> gradle downloadDependencies
+> ./gradlew downloadDependencies
 ```
 - Launch _Eclipse_,
 - Import the 3 _"Existing Projects into Workspace"_ by selecting the parent project folder,
