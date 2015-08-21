@@ -19,6 +19,14 @@ you do not have them all.
 > ./gradlew installSiteDist
 ```
 generate _"build/install/jd-eclipse-site"_
+
+###With Maven:
+```
+> mvn clean package 
+```
+creates _"jd.ide.eclipse.site/target/repository"_
+
+creates zipped version _"jd.ide.eclipse.site/target/jd.ide.eclipse.site-VERSION.zip"_
 ###With Eclipse:
 - Download dependencies
 ```
