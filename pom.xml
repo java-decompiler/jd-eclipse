@@ -8,6 +8,7 @@
 	<packaging>pom</packaging>
 	<properties>
 		<tycho-version>0.23.0</tycho-version>
+		<jd-version>0.7.1</jd-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
