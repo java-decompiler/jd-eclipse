@@ -2,19 +2,20 @@
 <feature
       id="jd.ide.eclipse.feature"
       label="JD-Eclipse Plug-in"
-      version="1.0.0"
+      version="1.0.0.qualifier"
       provider-name="Java Decompiler"
       plugin="jd.ide.eclipse.plugin">
 
    <description url="http://www.example.com/feature">
-    JD-Eclipse is a plug-in for the Eclipse platform. It allows you to display all the Java sources during your debugging process, even if you do not have them all.
+      JD-Eclipse is a plug-in for the Eclipse platform. It allows you to display all the Java sources during your debugging process, even if you do not have them all.
    </description>
 
    <copyright>
       Copyright (C) 2008-2015  Emmanuel Dupuy
    </copyright>
 
-   <license url="http://www.gnu.org/licenses/gpl-3.0.html">.
+   <license url="http://www.gnu.org/licenses/gpl-3.0.html">
+      .
                      GNU GENERAL PUBLIC LICENSE
 
                        Version 3, 29 June 2007
@@ -32,7 +33,7 @@ free software which everyone can redistribute and change under these terms.
   To do so, attach the following notices to the program.  It is safest
 to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
-the "copyright" line and a pointer to where the full notice is found.
+the &quot;copyright&quot; line and a pointer to where the full notice is found.
 
     JD-Eclipse is a plug-in for the Eclipse platform. It allows you to 
     display all the Java sources during your debugging process, even if you 
@@ -58,16 +59,16 @@ Also add information on how to contact you by electronic and paper mail.
 notice like this when it starts in an interactive mode:
 
     JD-Eclipse  Copyright (C) 2008-2015  Emmanuel Dupuy
-    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w&apos;.
     This is free software, and you are welcome to redistribute it
-    under certain conditions; type `show c' for details.
+    under certain conditions; type `show c&apos; for details.
 
-The hypothetical commands `show w' and `show c' should show the appropriate
-parts of the General Public License.  Of course, your program's commands
-might be different; for a GUI interface, you would use an "about box".
+The hypothetical commands `show w&apos; and `show c&apos; should show the appropriate
+parts of the General Public License.  Of course, your program&apos;s commands
+might be different; for a GUI interface, you would use an &quot;about box&quot;.
 
   You should also get your employer (if you work as a programmer) or school,
-if any, to sign a "copyright disclaimer" for the program, if necessary.
+if any, to sign a &quot;copyright disclaimer&quot; for the program, if necessary.
 For more information on this, and how to apply and follow the GNU GPL, see
 &lt;http://www.gnu.org/licenses/&gt;.
 
@@ -87,7 +88,7 @@ Public License instead of this License.  But first, please read
          id="jd.ide.eclipse.plugin"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="1.0.0.qualifier"
          unpack="false"/>
 
 </feature>
