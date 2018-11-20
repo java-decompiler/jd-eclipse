@@ -28,7 +28,7 @@ creates _"jd.ide.eclipse.site/target/repository"_
 
 creates zipped version _"jd.ide.eclipse.site/target/jd.ide.eclipse.site-VERSION.zip"_
 
-#### Download current p2 Repository version for eclipse: [jd.ide.eclipse.site-1.0.0-SNAPSHOT.zip](jd.ide.eclipse.site-1.0.0-SNAPSHOT.zip)
+#### Download current p2 Repository version for eclipse: [jd.ide.eclipse.site-1.0.0-SNAPSHOT.zip](jd.ide.eclipse.site/jd.ide.eclipse.site-1.0.0-SNAPSHOT.zip)
 
 ### With Eclipse:
 - Download dependencies
