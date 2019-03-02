@@ -4,7 +4,7 @@ JD-Eclipse, a Java decompiler plug-in for the Eclipse platform.
 
 ![](http://jd.benow.ca/img/screenshot8.png)
 
-- Java Decompiler projects home page: [java-decompiler.github.io](java-decompiler.github.io)
+- Java Decompiler projects home page: [http://java-decompiler.github.io](http://java-decompiler.github.io)
 - Java Decompiler Wikipedia page: [http://en.wikipedia.org/wiki/Java_Decompiler](http://en.wikipedia.org/wiki/Java_Decompiler)
 - JD-Eclipse source code: [https://github.com/java-decompiler/jd-eclipse](https://github.com/java-decompiler/jd-eclipse)
 
