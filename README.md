@@ -2,7 +2,7 @@
 
 JD-Eclipse, a Java decompiler plug-in for the Eclipse platform.
 
-![](http://jd.benow.ca/img/screenshot8.png)
+![](http://java-decompiler.github.io/img/screenshot8.png)
 
 - Java Decompiler projects home page: [http://java-decompiler.github.io](http://java-decompiler.github.io)
 - Java Decompiler Wikipedia page: [http://en.wikipedia.org/wiki/Java_Decompiler](http://en.wikipedia.org/wiki/Java_Decompiler)
@@ -50,3 +50,11 @@ Click on _"Window > Preferences > Java > Decompiler"_
 1. Click on _"Help > About Eclipse > Installation Details"_,
 2. Select _"JD-Eclipse Plug-in"_,
 3. Click on _"Uninstall..."_.
+
+## License
+Released under the [GNU GPL v3](LICENSE).
+
+## Donations
+Did JD-GUI help you to solve a critical situation? Do you use JD-Eclipse daily? What about making a donation?
+
+[![paypal](https://raw.githubusercontent.com/java-decompiler/jd-gui/master/src/website/img/btn_donate_euro.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=C88ZMVZ78RF22) [![paypal](https://raw.githubusercontent.com/java-decompiler/jd-gui/master/src/website/img/btn_donate_usd.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CRMXT4Y4QLQGU)
