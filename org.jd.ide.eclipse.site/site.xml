@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.jd.ide.eclipse.feature_2.0.0.jar" id="org.jd.ide.eclipse.feature" version="2.0.0">
+      <category name="JD-Eclipse"/>
+   </feature>
+   <category-def name="JD-Eclipse" label="Java Decompiler Eclipse Plug-in"/>
+</site>

@@ -2,7 +2,7 @@ apply plugin: 'distribution'
 
 // Common configuration //
 allprojects {
-	version='1.0.0'	
+	version='2.0.0'
 }
 
 subprojects.each { subproject ->
@@ -10,17 +10,29 @@ subprojects.each { subproject ->
 }
 
 distributions {
-	site {
+	distZip {
+		// Create JAR files before final ZIP file
+		dependsOn subprojects.tasks['jar']		
+		// For each file, remove root directory  
+		eachFile { file ->
+        	String path = file.relativePath
+        	file.setPath(path.substring(path.indexOf('/')+1, path.length()))
+    	}
+	}
+
+	main {
 		contents {
 			into('features') {
-				from { fileTree('jd.ide.eclipse.feature/build/libs') { include '*.jar' } }
+				from { 
+					fileTree 'org.jd.ide.eclipse.feature/build/libs'
+				}
 			}
 			into('plugins') {
-				from { fileTree('jd.ide.eclipse.plugin/build/libs') { include '*.jar' } }
+				from { 
+					fileTree 'org.jd.ide.eclipse.plugin/build/libs'
+				}
 			}
-			from 'jd.ide.eclipse.site/site.xml', 'LICENSE', 'NOTICE', 'README.md'
+			from 'org.jd.ide.eclipse.site/site.xml', 'LICENSE', 'NOTICE', 'README.md'
 		}
 	}
 }
-
-installSiteDist.dependsOn subprojects.tasks['jar']

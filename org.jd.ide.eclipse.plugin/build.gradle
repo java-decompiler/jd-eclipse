@@ -1,0 +1,81 @@
+apply plugin: 'java'
+
+repositories {
+	jcenter()
+}
+
+configurations {
+	provided
+	compile.extendsFrom provided
+}
+
+dependencies {
+	compile 'org.jd:jd-core:1.0.7'
+	
+	provided 'org.eclipse.core:org.eclipse.core.commands:3.6.0'	
+	provided 'org.eclipse.core:org.eclipse.core.resources:3.7.100'
+
+	provided('org.eclipse.jdt:org.eclipse.jdt.core:3.18.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.jdt:org.eclipse.jdt.ui:3.18.0') {
+		exclude group:'org.eclipse.birt.runtime'
+		exclude group:'org.eclipse.emf'
+		exclude group:'org.eclipse.jdt'
+		exclude group:'org.eclipse.platform'
+		exclude group:'com.ibm.icu'
+	}
+	provided('org.eclipse.platform:org.eclipse.jface:3.15.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.jface.text:3.15.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.swt.win32.win32.x86_64:3.111.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.ui.workbench:3.111.0') {
+		exclude group:'org.eclipse.emf'
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.ui.workbench.texteditor:3.11.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.ui.ide:3.15.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.ui.editors:3.11.0') {
+		exclude group:'org.eclipse.platform'
+	}
+	provided('org.eclipse.platform:org.eclipse.ui.editors:3.11.0') { 
+		exclude group:'org.eclipse.platform'
+	}
+}
+
+compileJava {
+	sourceCompatibility = '1.8'
+	targetCompatibility = '1.8'	
+	source 'src'
+}
+
+jar {
+	archiveName baseName + '_' + version + '.' + extension
+	manifest {
+		from 'META-INF/MANIFEST.MF'
+	}	
+	from fileTree('.') {
+		include 'icons/**'
+		include 'about.ini'
+		include 'plugin.xml'
+	}
+	into('lib') {
+		from project.configurations.runtime - project.configurations.provided
+	}
+}
+
+task copyDependencies(type: Copy) {
+	from project.configurations.runtime - project.configurations.provided
+	into 'lib'
+}
+
+build.finalizedBy copyDependencies
