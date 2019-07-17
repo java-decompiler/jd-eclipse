@@ -2,10 +2,9 @@
 
 JD-Eclipse, a Java decompiler plug-in for the Eclipse platform.
 
-![](http://java-decompiler.github.io/img/screenshot8.png)
+![](https://raw.githubusercontent.com/java-decompiler/jd-eclipse/master/src/website/img/jd-eclipse.png)
 
 - Java Decompiler projects home page: [http://java-decompiler.github.io](http://java-decompiler.github.io)
-- Java Decompiler Wikipedia page: [http://en.wikipedia.org/wiki/Java_Decompiler](http://en.wikipedia.org/wiki/Java_Decompiler)
 - JD-Eclipse source code: [https://github.com/java-decompiler/jd-eclipse](https://github.com/java-decompiler/jd-eclipse)
 
 ## Description
@@ -16,27 +15,22 @@ you do not have them all.
 ## How to build JD-Eclipse ?
 ### With Gradle:
 ```
-> ./gradlew installSiteDist
+> git clone https://github.com/java-decompiler/jd-eclipse.git
+> cd jd-eclipse
+> ./gradlew build
 ```
-generate _"build/install/jd-eclipse-site"_
-### With Eclipse:
-- Download dependencies
-```
-> ./gradlew downloadDependencies
-```
-- Launch _Eclipse_,
-- Import the 3 _"Existing Projects into Workspace"_ by selecting the parent project folder,
-- Export _"Deployable features"_,
-- Copy _"site.xml"_ to the destination directory.
+generate _"build/distributions/jd-eclipse-x.y.z.zip"_
 
 ## How to install JD-Eclipse ?
-1. Build or download & unzip _"jd-eclipse-site-x.y.z.zip"_,
+1. Build or download _"jd-eclipse-x.y.z.zip"_,
 2. Launch _Eclipse_,
 3. Click on _"Help > Install New Software..."_,
-4. Click on button _"Add..."_ to add an new repository,
-5. Enter _"JD-Eclipse Update Site"_ and select the local site directory,
-6. Check _"Java Decompiler Eclipse Plug-in"_,
-7. Next, next, next... and restart.
+4. Drag and drop _"jd-eclipse-x.y.z.zip"_ on dialog windows,
+5. Check _"Java Decompiler Eclipse Plug-in"_,
+6. Click on "Next" and "Finish" buttons.
+7. A warning message dialog windows appear because _"org.jd.ide.eclipse.plugin_x.y.z.jar"_ is not signed. Click on "Install anyway" button.
+
+![](https://raw.githubusercontent.com/java-decompiler/jd-eclipse/master/src/website/img/install_anyway.png)
 
 ## How to check the file associations ?
 Click on _"Window > Preferences > General > Editors > File Associations"_
