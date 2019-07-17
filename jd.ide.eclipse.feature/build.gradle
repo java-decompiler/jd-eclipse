@@ -1,6 +1,0 @@
-apply plugin: 'java'
-
-jar {
-    from 'feature.xml'
-    archiveName baseName + '_' + version + '.' + extension
-}
