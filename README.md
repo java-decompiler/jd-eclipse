@@ -13,7 +13,6 @@ display all the Java sources during your debugging process, even if
 you do not have them all.
 
 ## How to build JD-Eclipse ?
-### With Gradle:
 ```
 > git clone https://github.com/java-decompiler/jd-eclipse.git
 > cd jd-eclipse
@@ -28,7 +27,7 @@ generate _"build/distributions/jd-eclipse-x.y.z.zip"_
 4. Drag and drop _"jd-eclipse-x.y.z.zip"_ on dialog windows,
 5. Check _"Java Decompiler Eclipse Plug-in"_,
 6. Click on "Next" and "Finish" buttons.
-7. A warning message dialog windows appear because _"org.jd.ide.eclipse.plugin_x.y.z.jar"_ is not signed. Click on "Install anyway" button.
+7. A warning dialog windows appear because _"org.jd.ide.eclipse.plugin_x.y.z.jar"_ is not signed. Click on "Install anyway" button.
 
 ![](https://raw.githubusercontent.com/java-decompiler/jd-eclipse/master/src/website/img/install_anyway.png)
 
